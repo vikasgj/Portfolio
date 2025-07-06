@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vikas G J - Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyan: {
+                            300: '#67e8f9',
+                            500: '#06b6d4',
+                        },
+                    },
+                    animation: {
+                        'gradient-x': 'gradient-x 10s ease infinite',
+                        'gradient-y': 'gradient-y 10s ease infinite',
+                        'gradient-xy': 'gradient-xy 10s ease infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'floating 6s ease-in-out infinite',
+                        'gradient-x-slow': 'gradient-x 15s linear infinite',
+                        'gradient-y-slow': 'gradient-y 15s linear infinite',
+                        'pulse-slower': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        'gradient-y': {
+                            '0%, 100%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'center top'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'center center'
+                            }
+                        },
+                        'gradient-x': {
+                            '0%': {
+                                'background-position': '0% 50%'
+                            },
+                            '50%': {
+                                'background-position': '100% 50%'
+                            },
+                            '100%': {
+                                'background-position': '0% 50%'
+                            }
+                        },
+                        'gradient-xy': {
+                            '0%, 100%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '400% 400%',
+                                'background-position': 'right center'
+                            }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div id="cursor-tracker" class="fixed pointer-events-none z-50 mix-blend-difference">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+        <div class="cursor-trail"></div>
+    </div>
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 py-12 sm:py-0">
+            <div class="space-y-4 sm:space-y-6">
+                <!-- Animated Greeting -->
+                <div class="text-lg sm:text-xl md:text-2xl text-gray-400 animate-float">
+                    <span class="inline-block hover:text-cyan-300 transition-colors duration-300">👋</span>
+                    <span class="ml-2">Hello World, I'm</span>
+                </div>
+
+                <!-- Name -->
+                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-8 relative group perspective-1000">
+                    <span class="absolute -inset-1 bg-gradient-to-r from-purple-600/40 via-pink-500/40 to-cyan-500/40 rounded-lg blur-2xl opacity-20 group-hover:opacity-40 transition-all duration-1000"></span>
+                    <span class="relative bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-300 animate-gradient-x-slow bg-[length:200%_auto] text-gradient-shadow hover:scale-[1.02] transition-all duration-500 inline-block">
+                        VIKAS G J
+                    </span>
+                    <span class="absolute top-0 left-0 w-full bg-gradient-to-r from-transparent via-pink-300/10 to-transparent h-[1px] animate-gradient-x-slow"></span>
+                    <span class="absolute bottom-0 left-0 w-full bg-gradient-to-r from-transparent via-cyan-300/10 to-transparent h-[1px] animate-gradient-x-slow"></span>
+                    <span class="absolute -left-2 top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-violet-300/10 to-transparent animate-gradient-y-slow"></span>
+                    <span class="absolute -right-2 top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-fuchsia-300/10 to-transparent animate-gradient-y-slow"></span>
+                </h1>
+
+                <!-- Animated Role/Description -->
+                <div class="text-base sm:text-lg md:text-xl lg:text-2xl space-y-3">
+                    <div class="font-light text-gray-300">
+                        <span class="text-cyan-300 font-medium">Building</span> the future, one line of code at a time
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-3 text-sm sm:text-base text-gray-400">
+                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">Python Backend</span>
+                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">Full Stack</span>
+                        <span class="px-3 py-1 rounded-full border border-gray-700 hover:border-cyan-500 hover:text-cyan-300 transition-colors duration-300 cursor-pointer">Innovation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Section -->
+        <section class="py-8 sm:py-16 relative">
+            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-12">
+                <!-- Profile Picture -->
+                <div class="w-28 h-28 sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 relative group perspective-1000">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600/40 via-pink-500/40 to-cyan-500/40 rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-all duration-1000"></div>
+                    <img 
+                        src="img/Profile Photo.jpg" 
+                        alt="Vikas G J"
+                        loading="lazy"
+                        class="w-full h-full object-cover rounded-full border-2 border-cyan-500/30 relative hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex-1 space-y-3 sm:space-y-4 text-center md:text-left">
+                    <div class="space-y-2 sm:space-y-3">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-300">
+                            <span class="italic">Software Developer</span> | 
+                            <span class="italic">Python Backend</span> | 
+                            <span class="italic">Innovator</span>
+                        </h2>
+                        
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">
+                            Hello! I'm <span class="font-bold text-cyan-300">Vikas G J</span> 
+                            <span class="font-semibold">Information Science and Engineering</span> Developer with a strong passion for 
+                            <span class="text-cyan-300">Backend Development</span>, 
+                            <span class="text-cyan-300">Python Django</span>, 
+                            <span class="text-cyan-300">Java</span>, and 
+                            <span class="text-cyan-300">Frontend Development</span>.
+                        </p>
+
+
+                        <p class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">
+                            Currently, I'm an <span class="font-semibold">Software Development Engineer Intern</span> at 
+                            <span class="italic font-semibold">WOISWP technologies Pvt Ltd</span>, gaining experience in Python, Django and Backend Software Development.
+                        </p>
+
+                        <p class="text-sm sm:text-base md:text-lg font-semibold text-cyan-300 mt-4">
+                            Let's connect and collaborate on exciting projects! 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section class="py-8 sm:py-16 px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-12 text-center">Experience Timeline</h2>
+            <div class="max-w-5xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
+                <!-- WOISWP Experience -->
+                <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-violet-400/20 via-fuchsia-400/20 to-cyan-300/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
+                        <div class="shrink-0">
+                            <a href="https://woiswp.com/" target="_blank" rel="noopener noreferrer" 
+                               class="block w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 p-1 hover:scale-105 transition-transform duration-300">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                                    <img src="img/Woiswp-logo.jpg" alt="Silo Fortune Logo" class="w-16 h-16 object-contain">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                                <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">WOISWP technologies Pvt Ltd</h3>
+                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Feb 2025 - Present</span>
+                            </div>
+                            <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Software Development Engineer Intern</p>
+                            <p class="text-gray-400">Working on development of backend and system architectures with FastAPI.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>    
+
+        <!-- Project Showcase -->
+        <section class="py-8 sm:py-16">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-12 text-center">Project Showcase</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-4">
+                <!-- Video Conferencing App -->
+                <div class="flip-card h-64 sm:h-64" onclick="location.href='https://vikasgj.github.io/Video-Conferencing/'">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-card-front p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Video Conferencing App</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">A group video chatting and live streaming application using Agora RTC.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">Website</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">JavaScript</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">APIs</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Features:</h3>
+                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
+                                <li>Real-time video/audio streaming</li>
+                                <li>Screen sharing capability</li>
+                                <li>Group Chat feature</li>
+                                <li>Low latency communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quad-Segretronics -->
+                <div class="flip-card h-64 sm:h-64" onclick="location.href='https://vikasgj.github.io/Major-Project/'">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-card-front p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Quad-Segretronics</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">IoT-powered waste management platform with real-time bin tracking, Google Maps integration, and analytics dashboard</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">IoT</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">TensorFlow</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">OpenCV</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">HTML</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">JavaScript</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">Google Maps API</span>
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Technical Details:</h3>
+                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
+                                <li>Real-time bin locations using Google Maps API</li>
+                                <li>Custom dashboard with fill level & waste type charts</li>
+                                <li>Status indicators for normal, warning, and critical bins</li>
+                                <li>Pure HTML, CSS, JS with Chart.js & responsive layout</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flask Voting System -->
+                <div class="flip-card h-64 sm:h-64" onclick="location.href='https://github.com/vikasgj/Voting-System'">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-card-front p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Flask Voting System</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">
+                                A secure, OTP-verified voting platform built with Flask, ideal for academic or small organizational use.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">Flask</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">Python</span>
+                                <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">SQLite</span>
+                                <!-- <span class="inline-block px-2 py-1 text-xs bg-blue-600 rounded-full">API</span> -->
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">Key Features:</h3>
+                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
+                                <li>Email-based OTP verification for voters</li>
+                                <li>Admin panel with login and QR-code distribution</li>
+                                <li>Secure vote submission and result tallying</li>
+                                <li>Built using Flask and SQLite</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- View All Projects Card -->
+                <div class="flip-card h-64 sm:h-64" onclick="location.href='https://github.com/vikasgj'">
+                    <div class="flip-card-inner relative w-full h-full">
+                        <div class="flip-card-front p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">View All Projects</h3>
+                            <p class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4">Explore my complete portfolio of projects and contributions on GitHub.</p>
+                            <div class="flex items-center justify-center mt-2">
+                                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-cyan-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flip-card-back p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg">
+                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-cyan-300">On My GitHub:</h3>
+                            <ul class="text-xs sm:text-sm text-gray-300 list-disc list-inside space-y-1">
+                                <li>More coding projects</li>
+                                <li>Open source contributions</li>
+                                <li>Code repositories</li>
+                                <li>Development history</li>
+                            </ul>
+                            <div class="mt-4 text-cyan-300 text-xs sm:text-sm">Click to visit my GitHub profile →</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Matrix -->
+        <section class="py-8 sm:py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center">Skills Matrix</h2>
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 max-w-4xl mx-auto px-4" id="skills-container">
+                <!-- Skills will be dynamically added here -->
+            </div>
+        </section>
+
+        <section class="py-8 sm:py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center">Resume And Certificates</h2>
+            <div class="download-box">
+                <h3 class="download-title">Downloads</h3>
+                <p class="download-description">Get access to my resume and certificates directly below.</p>
+
+                <div class="download-links">
+                    <!-- Resume -->
+                    <a href="img/Vikas G J - Resume.pdf" target="_blank" class="download-button green">
+                        <span>Download Resume (PDF)</span>
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm-7 2h14v2H5v-2z"/>
+                        </svg>
+                    </a>
+
+                    <!-- Certificates -->
+                    <a href="img/Python Course.pdf" target="_blank" class="download-button yellow">
+                        <span>Python Certificate (PDF)</span>
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 2H8c-1.1 0-2 .9-2 2v4h2V4h12v16H8v-4H6v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-9 12H3v-2h8V7l5 5-5 5v-3z"/>
+                        </svg>
+                    </a>
+                    <a href="img/React Course.pdf" target="_blank" class="download-button yellow">
+                        <span>React Certificate (PDF)</span>
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 2H8c-1.1 0-2 .9-2 2v4h2V4h12v16H8v-4H6v4c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-9 12H3v-2h8V7l5 5-5 5v-3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>   
+
+
+        <!-- Experience Timeline -->
+        <!-- <section class="py-8 sm:py-16 px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-12 text-center">Experience Timeline</h2>
+            <div class="max-w-5xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
+                <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-violet-400/20 via-fuchsia-400/20 to-cyan-300/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
+                        <div class="shrink-0">
+                            <a href="https://woiswp.com/" target="_blank" rel="noopener noreferrer" 
+                               class="block w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 p-1 hover:scale-105 transition-transform duration-300">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                                    <img src="img/Woiswp-logo.jpg" alt="Silo Fortune Logo" class="w-16 h-16 object-contain">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                                <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">WOISWP technologies Pvt Ltd</h3>
+                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Feb 2025 - Present</span>
+                            </div>
+                            <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Software Development Engineer Intern</p>
+                            <p class="text-gray-400">Working on development of backend and system architectures with FastAPI.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Mipzo Experience (Updated) -->
+                <!-- <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-violet-400/20 via-fuchsia-400/20 to-cyan-300/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
+                        <div class="shrink-0">
+                            <a href="https://mipzo.com" target="_blank" rel="noopener noreferrer" 
+                               class="block w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 p-1 hover:scale-105 transition-transform duration-300">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                                    <img src="mipzo.png" alt="Mipzo Logo" class="w-16 h-16 object-contain">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                                <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">Mipzo</h3>
+                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Nov 2024 - Feb 2025</span>
+                            </div>
+                            <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Innovation Technical Intern</p>
+                            <p class="text-gray-400">Led LMS development and implemented innovative frontend solutions using modern technologies.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Malnad Technical Club Experience -->
+                <!-- <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-fuchsia-400/20 via-cyan-300/20 to-violet-400/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
+                        <div class="shrink-0">
+                            <a href="https://mce.edu.in" target="_blank" rel="noopener noreferrer" 
+                               class="block w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-fuchsia-400 to-cyan-300 p-1 hover:scale-105 transition-transform duration-300">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                                    <img src="mtc.png" alt="MTC Logo" class="w-16 h-16 object-contain">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                                <a href="https://mce.edu.in" target="_blank" rel="noopener noreferrer" 
+                                   class="group/link inline-flex items-center gap-2 hover:text-cyan-300 transition-colors">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">Malnad Technical Club</h3>
+                                    <svg class="w-5 h-5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Jan 2022 - Dec 2024</span>
+                            </div>
+                            <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Vice President & Event Organizer</p>
+                            <p class="text-gray-400">Organized technical events and led team initiatives, fostering innovation and technical excellence.</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- AICTE Internship Experience -->
+                <!-- <div class="group relative p-3 sm:p-4 md:p-6">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-300/20 via-violet-400/20 to-fuchsia-400/20 rounded-lg blur-xl opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                    <div class="relative p-4 sm:p-6 bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
+                        <div class="shrink-0">
+                            <a href="https://www.aicte-india.org" target="_blank" rel="noopener noreferrer" 
+                               class="block w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-cyan-300 to-violet-400 p-1 hover:scale-105 transition-transform duration-300">
+                                <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                                    <img src="aicte.png" alt="AICTE Logo" class="w-16 h-16 object-contain">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2 sm:mb-3">
+                                <a href="https://www.aicte-india.org" target="_blank" rel="noopener noreferrer" 
+                                   class="group/link inline-flex items-center gap-2 hover:text-cyan-300 transition-colors">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-cyan-300">AICTE Internship</h3>
+                                    <svg class="w-5 h-5 opacity-0 group-hover/link:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </a>
+                                <span class="md:ml-auto text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full">Oct 2023 - Dec 2023</span>
+                            </div>
+                            <p class="text-base sm:text-lg font-semibold text-gray-300 mb-2">Website Developer</p>
+                            <p class="text-gray-400">Developed Prohands platform, implementing interactive features and modern UI/UX principles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-8 sm:py-16 px-4">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 md:mb-12 text-center">Get in Touch</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+                <!-- Contact Info -->
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 md:space-x-6">
+                    <a href="tel:+919741375061" class="w-full sm:w-auto text-sm sm:text-base">
+                        <span class="text-cyan-400">📱</span>
+                        <span class="group-hover:text-cyan-300">+91 8431661503</span>
+                    </a>
+                    <a href="mailto:pavanbasavaraj25@gmail.com" class="w-full sm:w-auto text-sm sm:text-base">
+                        <span class="text-cyan-400">📧</span>
+                        <span class="group-hover:text-cyan-300">vikasgj8@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+                    <a href="https://www.linkedin.com/in/vikasgj" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center scale-90 sm:scale-100">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span class="text-sm">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/vikasgj" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center scale-90 sm:scale-100">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                        </svg>
+                        <span class="text-sm">GitHub</span>
+                    </a>
+                    <!-- <a href="https://leetcode.com/u/pavanbasavaraj25/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center scale-90 sm:scale-100">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                        </svg>
+                        <span class="text-sm">LeetCode</span>
+                    </a> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="scroll-top" class="fixed bottom-4 right-4 bg-cyan-500/20 p-2 rounded-full hidden hover:bg-cyan-500/40 transition-all duration-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
