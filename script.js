@@ -1,13 +1,36 @@
         const skills = [
-            { name: 'Java', category: 'Core Languages' },
+            // Core Languages
             { name: 'Python', category: 'Core Languages' },
             { name: 'C', category: 'Core Languages' },
-            { name: 'React.js', category: 'Libraries' },
-            { name: 'Scikit-learn', category: 'Libraries' },
-            { name: 'Firebase', category: 'Tools' },
-            { name: 'MySQL', category: 'Tools' },
-            { name: 'Neural Networks', category: 'Interests' },
-            { name: 'APIs', category: 'Interests' },
+            { name: 'HTML5', category: 'Core Languages' },
+            { name: 'CSS', category: 'Core Languages' },
+            { name: 'JavaScript', category: 'Core Languages' },
+
+            // Frameworks & Libraries
+            { name: 'Django', category: 'Frameworks & Libraries' },
+            { name: 'Django REST Framework', category: 'Frameworks & Libraries' },
+
+            // Databases
+            { name: 'MySQL', category: 'Databases' },
+            { name: 'PostgreSQL', category: 'Databases' },
+
+            // DevOps & Tools
+            { name: 'Docker', category: 'DevOps & Tools' },
+            { name: 'GitHub Actions', category: 'DevOps & Tools' },
+            { name: 'CI/CD', category: 'DevOps & Tools' },
+            { name: 'Jenkins', category: 'DevOps & Tools' },
+            { name: 'AWS EC2', category: 'DevOps & Tools' },
+            { name: 'Linux (Shell Scripting)', category: 'DevOps & Tools' },
+            { name: 'Nginx', category: 'DevOps & Tools' },
+
+            // Other Tools
+            { name: 'VS Code', category: 'Tools' },
+            { name: 'Git', category: 'Tools' },
+            { name: 'GitHub', category: 'Tools' },
+            { name: 'Postman', category: 'Tools' },
+            { name: 'Arduino', category: 'Tools' },
+            { name: 'PyCharm', category: 'Tools' },
+            { name: 'Android Studio', category: 'Tools' }
         ];
 
         const skillsContainer = document.getElementById('skills-container');
